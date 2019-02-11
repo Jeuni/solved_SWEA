@@ -30,7 +30,7 @@ public class Solution1213 {
 						j++;
 				}
 			}
-
+  
 				System.out.println("#" + testCase + " " + count);
 		}
 	} // end of main
