@@ -15,27 +15,22 @@ public class Solution6855 {
 			for (int i = 0; i < arr.length; i++) {
 				arr[i] = sc.nextInt();
 			}
-			int index = arr.length / k;
+			int index = n/k;
 			int sum = 0;
-			int i = 0;
-			int count = 0;
-			for (i = index; i < arr.length && count < k; i += index) {
-				if(i == 0) {
-					break;
-				} else if (i == index) {
-					sum += (arr[i] - arr[0]);
-				} else {
-					sum += (arr[i] - arr[i - index + 1]);
+			if (index <= 1) {
+				sum = 0;
+			} else {
+				int i = 0, ind = index;
+				for (i = 0; i < arr.length && ind < arr.length; i++) {
+					sum += (arr[ind] - arr[i]);
+					i += index;
+					ind += index;
 				}
-				count++;
+				if((i-index-1) < arr.length-1) {
+					sum += arr[arr.length-1] - arr[i-index-1];
+				}
 			}
-			if(count>= k && (i-index) < arr.length-1) {
-				sum += arr[arr.length-1] - arr[i-index*2+1];
-			}
-			if(index >= arr.length) {
-				sum += arr[arr.length-1] - arr[0];
-			}
-//			sum += ();
+
 
 			System.out.println("#" + testCase + " " + sum);
 		}
