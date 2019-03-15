@@ -4,5 +4,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="배열"/>
 	<classpathentry kind="src" path="BFS"/>
+	<classpathentry kind="src" path="DFS"/>
+	<classpathentry kind="src" path="완전탐색"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
